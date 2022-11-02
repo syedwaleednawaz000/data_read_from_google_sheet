@@ -1,9 +1,11 @@
 import 'dart:convert';
+import 'package:excle_data/Home/web_view.dart';
 import 'package:excle_data/conroller/data_controller.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:excle_data/Model/Excel_Data_Fetch.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../utils/app_constant.dart';
 
@@ -47,8 +49,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   return controller.getData.length != 0 ? ListView.builder(
                       itemCount: controller.getData.length,
                       itemBuilder: (ctx, index) {
-                        AppConstant.flutterToast(message: "Data Successfully Loaded");
-                        return controller.getData[index].donorNo.toString().toUpperCase() == widget.donorId.toString().toUpperCase() ? Column(
+                        AppConstant.flutterToastError(message: "Data Successfully Loaded");
+                        // controller.getData[index].donorNo.toString().contains('12')
+                        return controller.getData[index].donorNo.toString().toUpperCase().contains(widget.donorId.toString().toUpperCase())  ? Column(
                           // crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
@@ -117,7 +120,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             SizedBox(height: Get.height * 0.02),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                AppConstant.urlCreator(paymentUrl: Uri.parse('https://www.farplace.org.uk/how-to-help/donations/'));
+                              },
                               child: Container(
                                 height: 30,
                                 decoration: BoxDecoration(
@@ -145,7 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 6,
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () async {
+                                Get.to(()=> WebViewExample());
+                              },
                               child: Container(
                                 height: 30,
                                 decoration: BoxDecoration(

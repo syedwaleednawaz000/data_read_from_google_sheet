@@ -16,7 +16,7 @@ class DataController extends GetxController {
   List<DataModel> getData = [];
 
   Future<List<DataModel>> fetchExcelDataFetch() async {
-    AppConstant.flutterToast(message: "Data Loading..");
+    AppConstant.flutterToastError(message: "Data Loading..");
     final response = await http.get(Uri.parse(
         "https://script.google.com/macros/s/AKfycbyIgcRX_yCdhLAVAuG8g4ImLvG0thUaFKl-kxMw74SgBFWhjhrrngD0QiHfpmjbNCQ6/exec"));
     var data = jsonDecode(response.body.toString());
@@ -26,11 +26,11 @@ class DataController extends GetxController {
       for (Map i in data) {
         getData.add(DataModel.fromJson(i));
       }
-      AppConstant.flutterToast(message: "Data Loaded");
+      AppConstant.flutterToastError(message: "Data Loaded");
       update();
       return getData;
     } else {
-      AppConstant.flutterToast(message: "Data Not Loaded some issue");
+      AppConstant.flutterToastError(message: "Data Not Loaded some issue");
       return getData;
       // update();
     }

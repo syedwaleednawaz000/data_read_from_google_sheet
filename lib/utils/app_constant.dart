@@ -1,8 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppConstant{
-  static void flutterToast({required String message}){
+
+  static Future<void> urlCreator({required var paymentUrl}) async {
+    if (await launchUrl(paymentUrl)) {
+      AppConstant.flutterToastSuccess(responseMessage: 'Url Successfully Loaded Wait');
+      await launchUrl(paymentUrl);
+    } else {
+      AppConstant.flutterToastError(message: 'Url Not Loaded');
+      throw 'Could not launch $paymentUrl';
+    }
+  }
+  static void flutterToastSuccess({required String responseMessage}){
+    Fluttertoast.showToast(
+        msg: responseMessage,
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 2,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0
+    );
+  }
+
+  static void flutterToastError({required String message}){
     Fluttertoast.showToast(
         msg: message,
         toastLength: Toast.LENGTH_SHORT,

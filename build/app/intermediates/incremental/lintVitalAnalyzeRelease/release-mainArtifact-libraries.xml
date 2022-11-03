@@ -4,10 +4,49 @@
       jars="E:\Air Ad App\Excel_data\build\app\intermediates\flutter\release\libs.jar"
       resolved="__local_aars__:E:\Air Ad App\Excel_data\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
+      name="E:\Air Ad App\Excel_data\android@@:url_launcher_android::release"
+      jars="E:\Air Ad App\Excel_data\build\url_launcher_android\.transforms\5ddfb20af2716532e4b729741e57c9e5\transformed\out\jars\classes.jar"
+      resolved="io.flutter.plugins.urllauncher:url_launcher_android:unspecified"
+      folder="E:\Air Ad App\Excel_data\build\url_launcher_android\.transforms\5ddfb20af2716532e4b729741e57c9e5\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="E:\Air Ad App\Excel_data\android@@:fluttertoast::release"
       jars="E:\Air Ad App\Excel_data\build\fluttertoast\.transforms\6eb691a603427abcd284f68eecfb4a8e\transformed\out\jars\classes.jar"
       resolved="com.example.FlutterToast:fluttertoast:unspecified"
       folder="E:\Air Ad App\Excel_data\build\fluttertoast\.transforms\6eb691a603427abcd284f68eecfb4a8e\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="E:\Air Ad App\Excel_data\android@@:path_provider_android::release"
+      jars="E:\Air Ad App\Excel_data\build\path_provider_android\.transforms\c806a6194fcd5630314be9b10389efdf\transformed\out\jars\classes.jar"
+      resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
+      folder="E:\Air Ad App\Excel_data\build\path_provider_android\.transforms\c806a6194fcd5630314be9b10389efdf\transformed\out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="E:\Air Ad App\Excel_data\android@@:webview_flutter_android::release"
+      jars="E:\Air Ad App\Excel_data\build\webview_flutter_android\.transforms\f227af775b17403de7edaab884f5df60\transformed\out\jars\classes.jar"
+      resolved="io.flutter.plugins.webviewflutter:webview_flutter_android:unspecified"
+      folder="E:\Air Ad App\Excel_data\build\webview_flutter_android\.transforms\f227af775b17403de7edaab884f5df60\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -74,18 +113,6 @@
       name="io.flutter:x86_64_release:1.0.0-3ad69d7be3a7231aab5525db322fc699f098315f@jar"
       jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\io.flutter\x86_64_release\1.0.0-3ad69d7be3a7231aab5525db322fc699f098315f\12a5437460cba077f929c3589eb31a38afa3a7\x86_64_release-1.0.0-3ad69d7be3a7231aab5525db322fc699f098315f.jar"
       resolved="io.flutter:x86_64_release:1.0.0-3ad69d7be3a7231aab5525db322fc699f098315f"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
-      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.6.10\b8af3fe6f1ca88526914929add63cf5e7c5049af\kotlin-stdlib-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.6.10"/>
-  <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
-      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.6.10\c118700e3a33c8a0d9adc920e9dec0831171925\kotlin-stdlib-common-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\androidx.lifecycle\lifecycle-common-java8\2.2.0\cd3478503da69b1a7e0319bd2d1389943db9b364\lifecycle-common-java8-2.2.0.jar"
@@ -272,9 +299,21 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.annotation:annotation:1.2.0@jar"
-      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation\1.2.0\57136ff68ee784c6e19db34ed4a175338fadfde1\annotation-1.2.0.jar"
-      resolved="androidx.annotation:annotation:1.2.0"/>
+      name="androidx.annotation:annotation:1.5.0@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\androidx.annotation\annotation\1.5.0\857678d6b4ca7b28571ef7935c668bdb57e15027\annotation-1.5.0.jar"
+      resolved="androidx.annotation:annotation:1.5.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.7.10\d2abf9e77736acc4450dc4a3f707fa2c10f5099d\kotlin-stdlib-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.7.10\bac80c520d0a9e3f3673bc2658c6ed02ef45a76a\kotlin-stdlib-common-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.annotation:annotation-experimental:1.1.0@aar"
       jars="C:\Users\syedw\.gradle\caches\transforms-3\58e3540d7f5a5bac6af9a8f8fab44363\transformed\jetified-annotation-experimental-1.1.0\jars\classes.jar"
@@ -301,4 +340,49 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="androidx.webkit:webkit:1.5.0@aar"
+      jars="C:\Users\syedw\.gradle\caches\transforms-3\0016e53e7c51daf235b9c87ae78e3cfd\transformed\webkit-1.5.0\jars\classes.jar"
+      resolved="androidx.webkit:webkit:1.5.0"
+      folder="C:\Users\syedw\.gradle\caches\transforms-3\0016e53e7c51daf235b9c87ae78e3cfd\transformed\webkit-1.5.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.guava:guava:28.1-android@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\28.1-android\c2526f8fad32a65a6d7032dd8e9524eb276b108b\guava-28.1-android.jar"
+      resolved="com.google.guava:guava:28.1-android"/>
+  <library
+      name="com.google.guava:failureaccess:1.0.1@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar"
+      resolved="com.google.guava:failureaccess:1.0.1"/>
+  <library
+      name="com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
+      resolved="com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"/>
+  <library
+      name="com.google.code.findbugs:jsr305:3.0.2@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar"
+      resolved="com.google.code.findbugs:jsr305:3.0.2"/>
+  <library
+      name="org.checkerframework:checker-compat-qual:2.5.5@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-compat-qual\2.5.5\435dc33e3019c9f019e15f01aa111de9d6b2b79c\checker-compat-qual-2.5.5.jar"
+      resolved="org.checkerframework:checker-compat-qual:2.5.5"/>
+  <library
+      name="com.google.errorprone:error_prone_annotations:2.3.2@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.3.2\d1a0c5032570e0f64be6b4d9c90cdeb103129029\error_prone_annotations-2.3.2.jar"
+      resolved="com.google.errorprone:error_prone_annotations:2.3.2"/>
+  <library
+      name="com.google.j2objc:j2objc-annotations:1.3@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar"
+      resolved="com.google.j2objc:j2objc-annotations:1.3"/>
+  <library
+      name="org.codehaus.mojo:animal-sniffer-annotations:1.18@jar"
+      jars="C:\Users\syedw\.gradle\caches\modules-2\files-2.1\org.codehaus.mojo\animal-sniffer-annotations\1.18\f7aa683ea79dc6681ee9fb95756c999acbb62f5d\animal-sniffer-annotations-1.18.jar"
+      resolved="org.codehaus.mojo:animal-sniffer-annotations:1.18"/>
 </libraries>

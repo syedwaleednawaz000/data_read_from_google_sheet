@@ -1,18 +1,15 @@
-import 'dart:convert';
+
 import 'package:excle_data/Home/web_view.dart';
 import 'package:excle_data/conroller/data_controller.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
-import 'package:excle_data/Model/Excel_Data_Fetch.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import '../utils/app_constant.dart';
 
 class HomeScreen extends StatefulWidget {
   String donorId;
+  String postCode;
 
-  HomeScreen({required this.donorId, Key? key}) : super(key: key);
+  HomeScreen({required this.postCode,required this.donorId, Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -20,8 +17,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final DataController cntrl = Get.put(DataController());
+  bool limit = false;
   @override
   void initState() {
+
     // TODO: implement initState
     cntrl.fetchExcelDataFetch();
     super.initState();
@@ -47,11 +46,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: GetBuilder<DataController>(builder: (controller){
                   return controller.getData.length != 0 ? ListView.builder(
-                      itemCount: controller.getData.length,
+
+                      itemCount:  controller.getData.length,
                       itemBuilder: (ctx, index) {
                         AppConstant.flutterToastError(message: "Data Successfully Loaded");
-                        // controller.getData[index].donorNo.toString().contains('12')
-                        return controller.getData[index].donorNo.toString().toUpperCase().contains(widget.donorId.toString().toUpperCase())  ? Column(
+                         // controller.getData[index].donorNo.toString().contains('12')
+                        return controller.getData[index].donorNo.toString().toUpperCase() == widget.donorId.toString().toUpperCase() && controller.getData[index].postCode.toString().toUpperCase() == widget.postCode.toString().toUpperCase()   ? Column(
                           // crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
@@ -169,6 +169,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )
                           ],
+                        ) :  index ==1  ? Center(
+                          child: Container(
+                              height: Get.height*0.3,
+                              decoration: BoxDecoration(
+                                color: Colors.grey.withOpacity(0.4),
+                                borderRadius: BorderRadius.circular(10)
+                              ),
+                              child: Center(child: Text("DonorID or PostCode have been not matched",))),
                         ) : Container();
                       }
                   ):  Center(child: Column(
@@ -178,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.black,
                       ),
                       SizedBox(height: 5,),
-                      Text("Data Loading.."),
+                      Text("Data Not Found"),
                     ],
                   ));
                 }),

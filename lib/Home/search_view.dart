@@ -1,14 +1,25 @@
 import 'package:excle_data/Home/home_screen.dart';
+import 'package:excle_data/conroller/data_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SearchView extends StatelessWidget {
+class SearchView extends StatefulWidget {
   SearchView({Key? key}) : super(key: key);
+
+  @override
+  State<SearchView> createState() => _SearchViewState();
+}
+
+class _SearchViewState extends State<SearchView> {
   TextEditingController searchDonortId = TextEditingController();
+
   TextEditingController postCode = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
+
   String? donorId;
+
   String? postCodeString;
   @override
   Widget build(BuildContext context) {
@@ -90,7 +101,10 @@ class SearchView extends StatelessWidget {
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
                     Get.to(
+
                       () => HomeScreen(
+
+                        postCode: postCodeString.toString(),
                           donorId: donorId.toString()),
                     );
                     print(searchDonortId.text.trim());

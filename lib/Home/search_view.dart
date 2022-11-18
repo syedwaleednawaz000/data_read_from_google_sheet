@@ -21,9 +21,9 @@ class _SearchViewState extends State<SearchView> {
   String? donorId;
 
   String? postCodeString;
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.yellow,
       appBar: AppBar(
@@ -47,7 +47,7 @@ class _SearchViewState extends State<SearchView> {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: TextFormField(
                   controller: searchDonortId,
-                  onChanged: (value){
+                  onChanged: (value) {
                     donorId = value.toString();
                   },
                   validator: (value) {
@@ -74,7 +74,7 @@ class _SearchViewState extends State<SearchView> {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: TextFormField(
                   controller: postCode,
-                  onChanged: (value){
+                  onChanged: (value) {
                     postCodeString = value.toString();
                   },
                   validator: (value) {
@@ -101,15 +101,14 @@ class _SearchViewState extends State<SearchView> {
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
                     Get.to(
-
                       () => HomeScreen(
-
-                        postCode: postCodeString.toString(),
+                          postCode: postCodeString.toString(),
                           donorId: donorId.toString()),
                     );
                     print(searchDonortId.text.trim());
                     print(donorId.toString());
-                  };
+                  }
+                  ;
                 },
                 child: Container(
                   height: Get.height * 0.07,

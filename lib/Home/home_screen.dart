@@ -46,10 +46,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: GetBuilder<DataController>(builder: (controller){
                   return controller.getData.length != 0 ? ListView.builder(
-
-                      itemCount:  controller.getData.length,
+                      itemCount:   controller.getData.length,
                       itemBuilder: (ctx, index) {
                         AppConstant.flutterToastError(message: "Data Successfully Loaded");
+                        if(controller.getData[index].donorNo.toString().toUpperCase() == widget.donorId.toString().toUpperCase() && controller.getData[index].postCode.toString().toUpperCase() == widget.postCode.toString().toUpperCase() ){
+                            limit = true;
+                        }
                          // controller.getData[index].donorNo.toString().contains('12')
                         return controller.getData[index].donorNo.toString().toUpperCase() == widget.donorId.toString().toUpperCase() && controller.getData[index].postCode.toString().toUpperCase() == widget.postCode.toString().toUpperCase()   ? Column(
                           // crossAxisAlignment: CrossAxisAlignment.center,
@@ -169,15 +171,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             )
                           ],
-                        ) :  index ==1  ? Center(
-                          child: Container(
-                              height: Get.height*0.3,
-                              decoration: BoxDecoration(
-                                color: Colors.grey.withOpacity(0.4),
-                                borderRadius: BorderRadius.circular(10)
-                              ),
-                              child: Center(child: Text("DonorID or PostCode have been not matched",))),
-                        ) : Container();
+                        )
+                            :  limit ? Container(
+                          child: Text(""),
+                        )
+                            : limit == false && index == cntrl.getData.length -1 ?
+                          Container(child: Text("No data Foun"),)
+                            :Container(
+                          child: Text(""),
+                        );
                       }
                       //Todo:
                   ):  Center(child: Column(

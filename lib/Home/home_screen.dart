@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                       SizedBox(height: Get.height * 0.06),
                                       const Text(
-                                        "amount achieved through sale",
+                                        "Amount Achieved Through Sales",
                                         style: TextStyle(
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold),
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                       SizedBox(height: Get.height * 0.01),
                                       const Text(
-                                        "Gidt Aid Claimed",
+                                        "Gift Aid Claimed",
                                         style: TextStyle(
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold),

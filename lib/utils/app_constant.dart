@@ -19,8 +19,8 @@ class AppConstant{
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,
         timeInSecForIosWeb: 2,
-        backgroundColor: Colors.green,
-        textColor: Colors.white,
+        backgroundColor: Colors.yellow,
+        textColor: Colors.black,
         fontSize: 16.0
     );
   }

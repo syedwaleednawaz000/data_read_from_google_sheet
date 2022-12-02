@@ -50,29 +50,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       ? ListView.builder(
                           itemCount: controller.getData.length,
                           itemBuilder: (ctx, index) {
-                            AppConstant.flutterToastError(
-                                message: "Data Successfully Loaded");
-                            if (controller.getData[index].donorNo
-                                        .toString()
-                                        .toUpperCase() ==
-                                    widget.donorId.toString().toUpperCase() &&
-                                controller.getData[index].postCode
-                                        .toString()
-                                        .toUpperCase() ==
-                                    widget.postCode.toString().toUpperCase()) {
+                            // AppConstant.flutterToastError(
+                            //     message: "Data Successfully Loaded");
+                            if (controller.getData[index].donorNo == widget.donorId &&
+                                controller.getData[index].postCode == widget.postCode) {
                               limit = true;
                             }
+                            // controller.getData[index].donorNo.toString().toUpperCase() == widget.donorId.toString().toUpperCase() &&
+                            //     controller.getData[index].postCode.toString().toUpperCase() == widget.postCode.toString().toUpperCase()
+
                             // controller.getData[index].donorNo.toString().contains('12')
-                            return controller.getData[index].donorNo
-                                            .toString()
-                                            .toUpperCase() ==
-                                        widget.donorId
-                                            .toString()
-                                            .toUpperCase() &&
-                                    controller.getData[index].postCode
-                                            .toString()
-                                            .toUpperCase() ==
-                                        widget.postCode.toString().toUpperCase()
+                            return controller.getData[index].donorNo == widget.donorId &&
+                                    controller.getData[index].postCode == widget.postCode
                                 ? Column(
                                     // crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
@@ -125,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                       SizedBox(height: Get.height * 0.01),
                                       Text(
-                                        "£ ${controller.getData[index].gross}",
+                                        "£ ${controller.getData[index].gross}.00",
                                         style: const TextStyle(
                                             fontSize: 14,
                                             fontWeight: FontWeight.bold),
@@ -219,8 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ? Container(
                                             height: Get.height * 0.3,
                                             decoration: BoxDecoration(
-                                                color: Colors.grey
-                                                    .withOpacity(0.4),
+                                                color: Colors.red,
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
                                             child: const Center(
@@ -243,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(
                               height: 5,
                             ),
-                            Text("Data Not Found"),
+                            Text("Searching"),
                           ],
                         ));
                 }),

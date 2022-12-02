@@ -21,16 +21,7 @@ class DataController extends GetxController {
       for (Map i in data) {
         getData.add(DataModel.fromJson(i));
       }
-      // if(getData.length != 0){
-      //   listLenght = true.obs;
-      //   update();
-      //   print('value if the limit true ${getData.length.toString()}');
-      // }else{
-      //   listLenght = false.obs;
-      //   update();
-      //   print('value if the limit false ${getData.length.toString()}');
-      // }
-      AppConstant.flutterToastError(message: "Data Loaded");
+      AppConstant.flutterToastSuccess(responseMessage: "Data Successfully Loaded");
       update();
       return getData;
     } else {
